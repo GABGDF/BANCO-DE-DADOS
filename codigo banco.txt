@@ -1,0 +1,10 @@
+exercicio 1 
+
+creat table aluno (RM int auto_increment, 
+nome varchar(30), 
+telefone varchar(15)
+email varchar(60));
+
+exercicio 2
+
+insert into aluno(nome, telefone, email) values ('gabriel','12345','gagagag@etec')

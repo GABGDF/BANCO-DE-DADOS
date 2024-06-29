@@ -1,0 +1,55 @@
+19. Localizem os registros de vendedores que não comecem com a letra „J‟.
+
+R:SELECT nome_vendedor from vendedor where nome_vendedor not like 'J%';
+
+20. Localizem os registros de clientes cujos nomes contenham as letras „io‟.
+
+R:SELECT nome_cliente from cliente where nome_cliente like '%io%';
+
+21. Selecionem os nomes dos clientes que comecem com letra „A‟ até a letra „F‟.
+
+R:SELECT nome_cliente from cliente WHERE nome_cliente BETWEEN 'A' and 'F';
+
+22. Mostre a descrição dos produtos quando a unidade do produto não seja igual a „M‟ e
+„Kg‟.
+
+R:SELECT descricao_produto from produto where unidade not like 'M' or 'Kg';
+
+23. Selecionem os vendedores que não possuem a faixa de comissão.
+
+R:SELECT nome_vendedor from vendedor where faixa_comissao = 0;
+
+
+24. Listem os clientes que possuem Inscrição Estadual, ou seja, Inscrição Estadual não
+nula.
+
+R: SELECT nome_cliente FROM cliente WHERE ie not like 'null';
+
+25. Crie uma consulta que exiba os clientes ordenados pelo nome do cliente.
+
+R: 	SELECT nome_cliente FROM cliente order by nome_cliente asc;
+
+26. Faça uma consulta da tabela vendedor que mostre nome do vendedor e o salário fixo
+dos vendedores ordenados pelo nome do vendedor.
+
+R: SELECT nome_vendedor, salario_fixo FROM vendedor ORDER by nome_vendedor asc;
+
+27. Mostre o nome do cliente e o endereço dos clientes do estado de SP ordenados pelo
+código do cliente.
+
+R: 
+
+28. Selecione o número do pedido dos pedidos que possuem o prazo de entrega igual a 20
+dias classificado em ordem decrescente pelo número do pedido.
+
+R:
+
+29. Listem as faixas de comissões, os nomes e os códigos dos vendedores ordenados pela
+faixa de comissão e pelo nome do vendedor.
+
+R:
+
+30. Realize uma consulta que exiba os estados e os nomes dos clientes que comecem com a
+letra „P‟ até a letra „Z‟, classificados por estado e nome.
+
+R:

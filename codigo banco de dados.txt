@@ -1,0 +1,138 @@
+//criaçao de tabela 
+creat table aluno( idaluno int auto_increment primary key, 
+nome varchar(30));
+
+
+creat table aluno (idaluno int auto_increment, 
+nome varchar(30), 
+constraint pk_aluno primary key(idaluno));
+
+//inserir informaçoes na tabela do B.D 
+insert into aluno(nome) values (´brunolindao`)
+                  campo           info.
+
+//insert atributo em tabela ja existente 
+alter table aluno add rg varchar(15)
+
+insert into aluno (nome, rg) values (´joao`, ´777`)
+
+//remova atributo em tabela ja existente
+alter table aluno drop column rg; 
+----------------------------------------------------------------------------------
+
+TABELA: fornecedor 
+PK: idfornecedor 
+ATIBUTO: nome, rg, cpf, endereço, telefone, email, celular
+
+create table fornecedor ( idfornecedor int auto_increment primary key, 
+nome varchar(30),
+rg varchar(15),
+cpf varchar(15), 
+endereco varchar(60), 
+telefone varchar(15), 
+email varchar(60),
+celular varchar(15)
+);
+
+insert into aluno(nome, rg, cpf, endereco, telefone, email, celular) values (´gabriel`,´777777777`,´8888888888888`,´rua miguel`,´090909090`,´eu@gmail`,´99200000000`)
+insert into aluno(nome, rg, cpf, endereco, telefone, email, celular) values ('iel',´080212515`,´0804585055050`,´rua sao`,´605855501`,´jao@gmail`,´05010151515`)
+insert into aluno(nome, rg, cpf, endereco, telefone, email, celular) values (´gab`,´777777777`,´8888086453324`,´rua duardo`,´454545450`,´mane@gmail`,´44454877878`)
+
+
+alter table fornecedor add TESTE varchar(35);
+alter table fornecedor drop Colum TESTE);
+
+crea
+inicia wamp, localhost, myadmin, mysql, root 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+CREATE TABLE PRODUTO (idproduto int AUTO_INCREMENT PRIMARY KEY, nome varchar (20), quantidade double, tipo varchar(20), validade varchar(20), marca varchar(20));
+
+
+
+
+
+
+CREATE TABLE cliente(
+    idcliente int AUTO_INCREMENT PRIMARY KEY, nome varchar(30) cpf double,telefone varchar(15), sexo varchar, idade int, nivel varchar(30), cep varchar(30), endereco varchar(30));
+
+
+
+
+
+CREATE TABLE funcionario( idfuncionario int AUTO_INCREMENT PRIMARY KEY, nome varchar(30), cpf varchar(30), rg varchar(30), endereco varchar(30), cep varchar(30), estados varchar(30),idade int, data_a varchar(50));
+
+
+
+
+
+
+INSERT INTO produto( nome, quantidade, tipo, validade, marca) VALUES ('arroz', 50 , 'ALIMENTO', '02/24', 'nissin')
+
+
+
+
+
+
+select nome_vendedor, salario_fixo from vendedor where salario_fixo > 1500;
+
+select nome_vendedor, salario_fixo from vendedor where salario_fixo != 1500;
+
+select DISTINCT nome_vendedor from vendedor;
+
+select nome_vendedor from vendedor where salario_fixo > 1500 and faixa_comissao = 'C'; 
+
+select nome_vendedor from vendedor where salario_fixo > 1500 or faixa_comissao = 'C'; 
+
+
+
+
+
+deleta as informações da tabela:
+DELETE FROM vendedor;
+
+deleta a tabela:
+DROP table cliente;
+
+------------------CHAVE ESTRANGEIRA--------------------------
+
+CREATE TABLE ESTADO( ID_E INT AUTO_INCREMENT PRIMARY KEY, SIGLA VARCHAR(2));
+
+CREATE TABLE CIDADE(ID_C INT AUTO_INCREMENT PRIMARY KEY, NOME VARCHAR(45), COD_E INT, CONSTRAINT FK_CIDADE_ESTADO FOREIGN KEY (COD_E) REFERENCES ESTADOS(ID_E));
+
+
+
+
+CREATE TABLE CATEGORIA(
+    ID_C INT AUTO_INCREMENT PRIMARY KEY,
+    NOME VARCHAR(45)
+  
+);
+
+CREATE TABLE FORNECEDOR(
+	ID_F INT AUTO_INCREMENT PRIMARY KEY,
+	NOME VARCHAR(45)
+);
+
+CREATE TABLE PRODUTO(
+	ID_P INT AUTO_INCREMENT PRIMARY KEY,
+    NOME VARCHAR(45),
+    COD_C INT,
+   	CONSTRAINT FK_CATEGORIA_PRODUTO FOREIGN KEY (COD_C) REFERENCES CATEGORIA (ID_C),
+    COD_F INT,
+    CONSTRAINT FK_FORNECEDOR_PRODUTO FOREIGN KEY (COD_F) REFERENCES CATEGORIA (ID_F)
+    );
+

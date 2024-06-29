@@ -1,0 +1,25 @@
+/*1) adicionar 2 atributos novos na tabela produto
+ 
+2) remover todas as informações da tabela vendedor
+ 
+3) excluir a tabela cliente
+ 
+4) selecionar todos os vendedores com salário fixo maior do que 1000.
+ 
+5) selecionar todos os clientes da cidade de rio preto e com nome de joão
+ 
+6) selecionar o nome dos clientes e endereço, porém do estado de sp e mt.
+ 
+7) inserir 2 informações distintas, em todos os campos, da tabela cliente
+ 
+8) excluir o atributo faixa_comissao da tabela vendedor*/
+
+
+/*1*/ ALTER TABLE produto ADD validade varchar(15); ALTER TABLE produto ADD preco varchar(15);
+/*2*/ DELETE FROM vendedor;
+/*3*/ DROP table cliente;
+/*4*/ SELECT nome_vendedor from vendedor where salario_fixo > 1000;
+/*5*/ SELECT nome_cliente from cleinte where cidade = 'Rio Preto' and nome_cliente = 'joão';
+/*6*/ SELECT nome_cliente, endereco from cliente where uf = 'SP' or uf = 'MT';
+/*7*/ INSERT into cliente (nome_cliente, endereco, cidade, cep, uf, cgc, ie) VALUES ('marcelo' , 'rua sla' , 'Rio Preto' , '15047-000' , ' SP' , ' 15 ' , 'sla'); INSERT into cliente (nome_cliente, endereco, cidade, cep, uf, cgc, ie) VALUES ('marcos' , 'rua sla' , 'Rio Preto' , '15047-240' , ' SP' , ' 1558 ' , 'slaaaaaaa'); 
+/*8*/ ALTER table vendedor DROP COLUMN faixa_comissao;

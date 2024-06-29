@@ -1,0 +1,32 @@
+1. Selecione os campos nome do cliente, endereço e estado de  todos os clientes.
+R:
+SELECT uf, endereco from (cliente);
+
+2. Liste todos os vendedores.
+R:
+SELECT nome_vendedor from (vendedor);	
+
+3. Liste os campos código do produto e quantidade da tabela Item do Pedido.
+R: 
+SELECT codigo_produto, quantidade FROM item_do_pedido;
+
+4. Liste o campo “código do cliente” da tabela pedidos e elimine as linhas duplicadas.
+R: 
+SELECT codigo_cliente FROM cliente;
+
+5. Selecione os campos código do produto, descrição do produto e valor unitário e altere a linha de cabeçalho dos campos selecionados.
+R:
+
+SELECT codigo_produto as "codigo do produto", descricao_produto as "descrição do produto", val_unit as "valor unitario" from produto
+
+
+6. Faça uma consulta que mostre o nome do cliente e estado e altere a linha de cabeçalho dos campos selecionados.
+R: 
+
+
+
+
+
+7. Quais são as cidades que a empresa possui clientes?
+8. Liste da tabela produto o campo Descrição e faça o produto do campo valor unitário por 1,3.
+9. Elabore uma consulta que mostre o código do cliente e mostre o prazo de entrega prorrogado por mais 3 dias da tabela pedido.

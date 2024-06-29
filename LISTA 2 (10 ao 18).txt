@@ -1,0 +1,45 @@
+10. Liste o nome do vendedor e faixa de comissão dos vendedores que possuem o salário
+fixo maior que R$ 4.000,00.
+
+SELECT nome_vendedor FROM vendedor WHERE salario_fixo > 4.000;
+
+11. Selecione os produtos cuja unidade do produto seja igual a kg.
+
+SELECT unidade FROM produto WHERE unidade = 'Kg';
+
+12. Faça uma consulta que mostre o nome do cliente e a cidade quando o estado for igual a
+SP ou cidade igual a Londrina da tabela cliente.
+
+SELECT nome_cliente, cidade FROM cliente where uf = 'SP' or cidade = 'londrina';
+
+13. Elabore uma consulta que mostre o número do pedido e o prazo de entrega dos pedidos
+que tiverem o código do cliente igual a 720 e o código do vendedor igual a 101.
+
+SELECT num_pedido, prazo_entrega FROM pedido WHERE codigo_cliente = '720' AND codigo_vendedor = '101';
+
+14. Selecione da tabela item do pedido o campo número do pedido quando a quantidade for
+maior igual a 30 e elimine as linhas duplicadas.
+
+SELECT DISTINCT num_pedido FROM item_do_pedido WHERE quantidade >= '30';
+
+
+15. Liste todos os vendedores, exceto os que possuem a faixa de comissão igual a "C‟.
+
+SELECT nome_vendedor FROM vendedor WHERE faixa_comissao != 'C';
+
+
+16. Liste as descrições de todos os produtos, exceto os que possuem a unidade o produto igual
+a  "M‟.
+
+SELECT DISTINCT descricao_produto FROM produto WHERE unidade = 'M';
+
+17. Crie uma consulta que mostre os nomes dos vendedores que possuem o Salário Fixo na
+faixa de R$ 1.000,00 até R$ 3.000,00.
+
+SELECT nome_vendedor from vendedor WHERE salario_fixo >= '1.000' and '3.000';
+
+18. Selecione os campos número dos pedidos e prazo de entrega de todos os pedidos que
+possuem o prazo de entrega que esteja entre 15 a 25 dias.
+
+
+SELECT DISTINCT num_pedido, prazo_entrega FROM pedido where prazo_entrega >= '15' and prazo_entrega <= '25';

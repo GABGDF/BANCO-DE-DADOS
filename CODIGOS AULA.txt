@@ -1,0 +1,7 @@
+SELECT * from (vendedor)
+
+SELECT nome_vendedor, salario_fixo FROM (vendedor);
+
+SELECT nome_vendedor as "nome do vendedor" FROM vendedor;
+
+SELECT prazo_entrega, prazo_entrega + 2 as "novo prazo" from pedido;
